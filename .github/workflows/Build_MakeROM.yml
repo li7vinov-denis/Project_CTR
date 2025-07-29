@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        dist: [ubuntu_x86_64, macos_x86_64, macos_arm64, win_x86_64]
+        dist: [ubuntu_x86_64, macos_x86_64, macos_arm64, win_x86_64, ubuntu_arm64]
         prog: [makerom]
         include:
           - dist: ubuntu_x86_64
@@ -26,6 +26,9 @@ jobs:
             arch: x86_64
           - dist: macos_arm64
             os: macos-latest
+            arch: arm64
+          - dist: ubuntu_arm64
+            os: ubuntu-24.04-arm
             arch: arm64
           - dist: win_x86_64
             os: windows-latest
