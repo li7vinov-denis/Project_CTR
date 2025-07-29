@@ -14,7 +14,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        dist: [ubuntu_x86_64, macos_x86_64, macos_arm64]
+        dist: [ubuntu_x86_64, macos_x86_64, macos_arm64, ubuntu-24.04-arm]
         prog: [ctrtool]
         include:
          - dist: ubuntu_x86_64
